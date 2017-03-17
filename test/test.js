@@ -11,9 +11,14 @@ describe('Server', function() {
 		chai.request('/home/ktuser/Deploy/index.js')
 		.get('/')
 		.end(function(err, res){
+			//not working, trying 'expect'			
 			//res.should.have.status(200);
+			
 			expect(res).to.have.status(200);
-			//done();
+			//alternative asser			
+			//expect(res).to.equal('Your GET Request has been 				recieved.');
+			
+			
 		});
 	done();	
 	});
