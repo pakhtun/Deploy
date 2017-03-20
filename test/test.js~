@@ -1,24 +1,23 @@
 var chai = require('chai');
 var chaiHTTP = require('chai-http');
+var expect = require('chai').expect;
+var api = require('/home/ktuser/Deploy/API.js');
+
 //var app = require('/home/ktuser/Deploy/index.js');
 //var should = chai.should();
-var expect = require('chai').expect;
+//chai.use(chaiHTTP);
 
-chai.use(chaiHTTP);
 
-describe('Server', function() {
-	it('should reply to a GET request', function(done) {
-		chai.request('/home/ktuser/Deploy/index.js')
-		.get('/')
-		.end(function(err, res){
-			//res.should.have.status(200);
-			expect(res).to.have.status(200);
-			//expect(res).to.equal('Your GET Request has been 				recieved.');
-			
-			
-		});
-	done();	
+describe('Correct Multiplication:', function() {
+
+	it('The API must correctly double the number it was given', function (done) {
+	
+		var bar = api.double(200);
+		expect(bar).to.equal(400);
+	
+	done();
 	});
-	   
+
+
 });
 

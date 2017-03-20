@@ -1,8 +1,11 @@
 var express = require('express');
 var app = express();
+var api = require('./API.js');
 
 app.listen(3000);
 
+
 app.get('/', function(req, res) {
-	console.log('Your GET Request has been recieved.');
+	var bar = api.double(200);
+	res.status(200).send({ bar });
 });
