@@ -1,7 +1,11 @@
-FROM ubuntu
+FROM nodesource/node:6.1.0
 
-COPY index.js /Deploy
+RUN mkdir -p /home/nodejs/app
+WORKDIR /home/nodejs/app
 
-CMD ["/index.js"]
-s
+COPY . /home/ktuser/Deploy
+RUN npm install --production
+
+CMD ["node", "index.js"]
+
 
