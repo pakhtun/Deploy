@@ -1,0 +1,6 @@
+To interact with the Deploy project, open two terminals and CD into /home/ktuser/Deploy
+
+Then in the first terminal, enter the command "node index.js" and hit enter. The terminal will standby as it listens on a specified port. In the second terminal, enter the command: "curl localhost:3000". (You may change the number 3000 to match whatever port number that the server is listening to - you can find this port number in index.js
+
+
+
